@@ -1,0 +1,34 @@
+name,year,ha,pocket3d,residue,paralogue,sel_in_search,covalent,rationale,note
+liGAN,2022,,True,False,False,False,False,False,"voxel generative model; evaluated on 10 targets, not the 100-pocket split"
+AR (3D-SBDD),2021,,True,False,False,False,False,False,"autoregressive atom placement, NeurIPS"
+GraphBP,2022,,True,False,False,False,False,False,"atom placement in local spherical frames, ICML"
+Pocket2Mol,2022,17.7,True,False,False,False,False,False,reported mean size is below the smallest molecule generated here
+FLAG,2023,,True,False,False,False,False,False,"motif-by-motif fragment assembly, ICLR"
+DrugGPS,2023,,True,False,False,False,False,False,"subpocket prototypes, generalises to unseen targets, ICML"
+SurfGen,2023,,True,False,False,False,False,False,"surface-mesh pocket encoder, Nat Comput Sci"
+TargetDiff,2023,24.2,True,False,False,False,False,False,"diffusion, pocket conditioned, ICLR"
+DecompDiff,2023,29.4,True,False,False,False,False,False,decomposed priors; best redocked score at the largest size
+ResGen,2023,,True,False,,False,False,False,"Nat Mach Intell; full text inaccessible, selectivity UNVERIFIED"
+D3FG,2023,,True,partial,False,False,False,False,"functional groups as rigid bodies; group-level, not residue-level, conditioning"
+Lingo3DMol,2023,,True,partial,False,False,False,False,fragment-SMILES LM that predicts non-covalent interaction sites
+DiffSBDD,2024,,True,False,True,False,False,False,"explicit negative design on ONE kinase pair, BIKE over MPSK1, as a case study"
+PMDM,2024,,True,False,False,False,False,False,"dual-scale equivariant diffusion, Nat Commun"
+PocketFlow,2024,,True,False,False,False,False,False,"chemical-knowledge constraints, wet-lab hits for HAT1 and YTHDC1, Nat Mach Intell"
+IPDiff,2024,,True,False,False,False,False,False,"pretrained interaction prior shifts the diffusion trajectory, ICLR"
+IRDiff,2024,,True,False,False,False,False,False,"retrieval-augmented diffusion steered by reference ligands, ICML"
+AliDiff,2024,,True,False,False,False,False,False,"preference alignment on binding energy, NeurIPS"
+TacoGFN,2024,,True,False,False,False,False,False,"target-conditioned GFlowNet, reward is affinity plus SA plus QED, TMLR"
+FlexSBDD,2024,,True,False,False,False,False,False,"flow matching over a FLEXIBLE pocket, relaxes side chains, NeurIPS"
+DeepICL,2024,,True,True,False,False,False,partial,THE residue-conditioning precedent: explicit interaction type per pocket atom
+PIDiff,2024,,True,False,partial,False,False,False,"physics-informed; off-target checked AFTER generation, not optimised for"
+BindGPT,2025,,True,False,False,False,False,False,"one language model for 3D generation, RL fine-tuned, AAAI"
+MolPilot,2025,,True,False,False,False,False,False,"VLB-optimal scheduling; 95.9% PoseBusters pass, the geometry state of the art"
+DynamicFlow,2025,,True,False,False,False,False,False,"apo to holo full-atom flow, integrates protein dynamics, ICLR"
+CByG,2025,,True,False,True,True,False,False,"CLOSEST ML NEIGHBOUR: selectivity as a guidance term plus an on/off-target benchmark; conditions on the pocket, not on a named residue"
+CMD-GEN,2025,,True,partial,True,True,False,False,CLOSEST EXPERIMENTAL NEIGHBOUR: selective pharmacophore points; wet-lab PARP1/PARP2 selective compound at >787-fold. Stronger evidence than ours
+DiffPharma,2026,,True,True,False,False,False,False,"interaction-particle constraints at residue level, npj Drug Discovery"
+MCTS kinase sel.,2022,,False,False,True,True,False,False,"multiobjective MCTS for selectivity among kinase homologs, JCIM 62:5351; the canonical selectivity prior art, but ligand-based"
+CogMol,2020,,False,False,True,True,False,False,"off-target penalty in a SMILES-VAE latent space, not 3D"
+CovaGEN,2026,,False,False,False,False,True,False,"THE covalent precedent: latent diffusion with warhead guidance, validated on EGFR T790M. Sequence-conditioned via ESM-2, so no pocket geometry"
+Covalent MORL,2026,,False,partial,False,False,True,False,SMILES-LSTM policy gradient with a residue-affinity reward term
+This work,2026,44.7,True,True,True,True,True,True,same-frame counter-pocket enters multi-objective SELECTION; warhead placed at a named divergent cysteine; every round states its reason

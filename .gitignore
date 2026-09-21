@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+_pdb_cache/
+_pubchem_cache.json
+.venv/
+*.log
+.DS_Store
+Thumbs.db

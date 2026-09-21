@@ -1,0 +1,37 @@
+POPULATIONS USED IN THIS STUDY
+Every count below is recomputed from the files the figures read.
+
+1  CAMPAIGNS
+   attempted                     18 receptor pairs
+   produced a final lead         17
+   produced none                 1 (SRC_LCK)
+   rounds per campaign           ABL1_SRC 6, AKT1_AKT2 3, BRAF_V600E 8, BRAF_V600E_alt 8, CA2_CA1 8, CDK6_CDK2 8, CTSK_CTSS 5, EGFR_T790M 8, JAK2_JAK1 8, KRAS_G12C 8, MAPK14_MAPK1 2, MCL1_BCL2 8, MMP13_MMP1 5, PARP1_PARP2 8, PIK3CA_PIK3CD 8, PTGS2_PTGS1 8, ROCK1_ROCK2 3
+   USED BY: containment, trajectories, structure panel
+
+2  MARKETED DRUG SET
+   compounds                     44, of which 41 approved
+   receptor pairs covered        12 of 17 campaigns with leads
+   campaigns with NO marketed drug for their target: CTSK_CTSS, MAPK14_MAPK1, MCL1_BCL2, MMP13_MMP1, ROCK1_ROCK2
+   per pair                      ABL1_SRC 5, AKT1_AKT2 2, BRAF_V600E 3, BRAF_V600E_alt 3, CA2_CA1 4, CDK6_CDK2 3, EGFR_T790M 6, JAK2_JAK1 4, KRAS_G12C 2, PARP1_PARP2 4, PIK3CA_PIK3CD 4, PTGS2_PTGS1 4
+   USED BY: commercial comparison, chemotype scale, recovery and retention statistics
+
+3  SBDD BENCHMARK POPULATION
+   molecules                     43, screened and de-duplicated
+   heavy atoms                   median 40, range 21 to 60
+   with a strain value           43
+   with a pose-validity verdict  31
+   NOT the same population as 1: this is every generated molecule that passed the
+   chemistry screen, not one final lead per campaign.
+   USED BY: the generative-model comparison figure
+
+4  COVALENT SUBSETS, WHICH ARE TWO DIFFERENT THINGS
+   campaigns setting a covalent goal      6 (ABL1_SRC, AKT1_AKT2, CA2_CA1, EGFR_T790M, KRAS_G12C, PARP1_PARP2)
+   final leads actually carrying a warhead 5 (ABL1_SRC: chloroacetamide, CA2_CA1: propiolamide, EGFR_T790M: chloroacetamide, KRAS_G12C: acrylonitrile, PIK3CA_PIK3CD: acrylamide)
+   Reporting the first number as though it were the second credits campaigns with
+   warheads their final molecules do not have.
+
+5  GUI IN-POCKET VIEWS
+   one campaign, CA2_CA1, rounds [1, 2, 3] at [15, 21, 22] heavy atoms
+   These poses were REDOCKED for the figure; they are not the poses scored during
+   the campaign, and the docking values are not shown.
+

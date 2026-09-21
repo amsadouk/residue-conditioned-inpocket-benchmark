@@ -1,0 +1,86 @@
+STRUCTURAL STATISTICS. No docking score is used in any test below.
+
+1  CHEMOTYPE RECOVERY AGAINST CHANCE
+   null: the known actives of the OTHER targets, scored the same way against the same
+   published compound. p is the exact fraction of decoys matching or beating the lead.
+
+   case            compound       lead     decoy null             p (exact)
+   ----------------------------------------------------------------------------
+   ABL1_SRC        imatinib       78%      median 22%, max 46%    0.0164  *
+   ABL1_SRC        nilotinib      49%      median 21%, max 36%    0.0164  *
+   ABL1_SRC        dasatinib      30%      median 21%, max 30%    0.0328  *
+   ABL1_SRC        ponatinib      41%      median 18%, max 26%    0.0164  *
+   ABL1_SRC        bosutinib      36%      median 19%, max 36%    0.0328  *
+   AKT1_AKT2       capivasertib   23%      median 23%, max 33%    0.5902
+   AKT1_AKT2       ipatasertib    19%      median 22%, max 31%    1.0000
+   BRAF_V600E      vemurafenib    21%      median 21%, max 36%    0.8525
+   BRAF_V600E      dabrafenib     20%      median 20%, max 31%    0.9508
+   BRAF_V600E      encorafenib    19%      median 19%, max 22%    0.9508
+   BRAF_V600E_alt  vemurafenib    21%      median 21%, max 36%    0.9344
+   BRAF_V600E_alt  dabrafenib     20%      median 20%, max 31%    0.9180
+   BRAF_V600E_alt  encorafenib    19%      median 19%, max 31%    0.9508
+   CA2_CA1         acetazolamide  38%      median 23%, max 38%    0.0984
+   CA2_CA1         methazolamide  36%      median 21%, max 36%    0.0492  *
+   CA2_CA1         dorzolamide    26%      median 16%, max 26%    0.0984
+   CA2_CA1         brinzolamide   22%      median 13%, max 22%    0.0984
+   CDK6_CDK2       palbociclib    21%      median 18%, max 33%    0.1967
+   CDK6_CDK2       ribociclib     22%      median 19%, max 28%    0.3607
+   CDK6_CDK2       abemaciclib    19%      median 19%, max 32%    0.7869
+   EGFR_T790M      gefitinib      55%      median 23%, max 45%    0.0164  *
+   EGFR_T790M      erlotinib      59%      median 24%, max 48%    0.0164  *
+   EGFR_T790M      afatinib       50%      median 21%, max 32%    0.0164  *
+   EGFR_T790M      osimertinib    22%      median 22%, max 46%    0.5246
+   EGFR_T790M      dacomitinib    52%      median 21%, max 36%    0.0164  *
+   EGFR_T790M      neratinib      20%      median 18%, max 22%    0.4262
+   JAK2_JAK1       ruxolitinib    30%      median 22%, max 39%    0.2951
+   JAK2_JAK1       baricitinib    27%      median 19%, max 35%    0.2951
+   JAK2_JAK1       fedratinib     19%      median 24%, max 35%    0.8689
+   JAK2_JAK1       tofacitinib    35%      median 26%, max 48%    0.2951
+   KRAS_G12C       sotorasib      17%      median 17%, max 32%    0.7377
+   KRAS_G12C       adagrasib      16%      median 14%, max 30%    0.4754
+   PARP1_PARP2     olaparib       25%      median 22%, max 44%    0.1639
+   PARP1_PARP2     niraparib      25%      median 29%, max 50%    1.0000
+   PARP1_PARP2     rucaparib      17%      median 29%, max 62%    1.0000
+   PARP1_PARP2     talazoparib    21%      median 25%, max 29%    1.0000
+   PIK3CA_PIK3CD   alpelisib      20%      median 20%, max 27%    0.6230
+   PIK3CA_PIK3CD   idelalisib     23%      median 23%, max 32%    0.5738
+   PIK3CA_PIK3CD   duvelisib      23%      median 23%, max 37%    0.6230
+   PIK3CA_PIK3CD   copanlisib     17%      median 20%, max 37%    1.0000
+   PTGS2_PTGS1     celecoxib      35%      median 27%, max 42%    0.1311
+   PTGS2_PTGS1     rofecoxib      50%      median 27%, max 41%    0.0164  *
+   PTGS2_PTGS1     etoricoxib     46%      median 25%, max 50%    0.0656
+   PTGS2_PTGS1     valdecoxib     45%      median 27%, max 45%    0.0984
+
+   11 of 44 comparisons beat the decoy null at p<0.05
+   median lead recovery 23% against median null 21%
+
+2  RECOGNITION RETENTION
+   does the lead hold EVERY primary recognition motif of the compound, and how often
+   does an unrelated active do the same
+
+   leads holding all motifs: 19 of 44
+   decoys holding all motifs: 12.6% on average
+   binomial test against the decoy rate: p = 0.00000  *
+
+3  CONTAINMENT
+   scaffold present whole in the final lead: 17 of 17 campaigns
+   Wilson 95% interval: 82% to 100% (n=17)
+
+4  COVALENT PLACEMENT AT DIVERGENT RESIDUES
+   campaigns with a covalent goal: 6
+
+   case            warhead on final lead residue   anti-target divergent
+   ------------------------------------------------------------------------
+   ABL1_SRC        chloroacetamide      Cys388    I395        DIVERGENT
+   AKT1_AKT2       NONE                 Cys296    C297        conserved
+   CA2_CA1         propiolamide         Cys206    S207        DIVERGENT
+   EGFR_T790M      chloroacetamide      Cys797    C797        conserved
+   KRAS_G12C       acrylonitrile        Cys12     G12         DIVERGENT
+   PARP1_PARP2     NONE                 Cys908    C474        conserved
+
+   4 of 6 campaigns with a covalent goal carry a warhead on the FINAL lead.
+   Of those 4, 3 sit at a position the anti-target differs at.
+   A conserved position is not a failed design. Reach, geometry and reactivity are
+   legitimate grounds for placing a warhead, and EGFR Cys797 is the residue the
+   third-generation inhibitors bond. It is simply not evidence for the selectivity
+   claim, so it is counted separately rather than folded in.
