@@ -121,11 +121,11 @@ def main() -> int:
 
         wh = (r.get("warhead") or "").split(", ")[0]
         if wh:
-            same = "also targets" in (r.get("anti_target_note") or "") or \
-                   bool((r.get("drug_warhead") or "").strip())
+            same = bool((r.get("drug_warhead") or "").strip())
             res = r.get("covalent_residue") or ""
-            txt = "%s at %s" % (wh.split(" (")[0][:11], res)
-            ax.text(X["cov"], y, S.clean(txt[:22]), fontsize=5.0, va="center",
+            wh_name = wh.split(" (")[0]
+            txt = ("%s at %s" % (wh_name, res)) if res else ("%s, no residue" % wh_name)
+            ax.text(X["cov"], y, S.clean(txt[:32]), fontsize=4.6, va="center",
                     color=(C_WIN if same else C_BAR), fontweight="bold")
             if same:
                 ax.text(X["cov"] + 0.0, y - 0.34,
@@ -139,14 +139,16 @@ def main() -> int:
                 va="center", ha="right", color=C_GREY)
 
     n_appr = sum(1 for r in R if r["approved"])
+    n_nomiss_rows = sum(1 for r in R if not r["missing_list"])
     n_nomiss = len({r["case"] for r in R if not r["missing_list"]})
     n_wh = len({r["case"] for r in R if (r.get("warhead") or "").strip()})
     n_cases = len({r["case"] for r in R})
     ax.plot([X["case"], 99.5], [-0.55, -0.55], linewidth=0.7, color="#444444")
     ax.text(X["case"], -1.05,
             S.clean("%d comparisons across %d receptor pairs, %d against approved drugs. "
-                    "%d leads lose no recognition chemistry. %d carry a covalent warhead."
-                    % (len(R), n_cases, n_appr, n_nomiss, n_wh)),
+                    "%d of the %d comparisons lose no recognition chemistry, spread over %d "
+                    "receptor pairs. %d leads carry a covalent warhead."
+                    % (len(R), n_cases, n_appr, n_nomiss_rows, len(R), n_nomiss, n_wh)),
             fontsize=5.6, color=S.C_TEXT, fontweight="bold")
 
     st = panel_state()

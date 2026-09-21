@@ -125,7 +125,7 @@ def compare(lead: Dict, drug: Dict, case: str) -> Dict:
             break
     return {
         "case": case, "drug": drug["name"][:34], "drug_key": drug["key"],
-        "approved": drug["key"] in APPROVED,
+        "approved": bool(drug.get("approved", drug["key"] in APPROVED)),
         "rounds": lead.get("_n_rounds"),
         "shared_atoms": shared, "shared_pct": round(pct, 0),
         "kept": sorted(g for g in (lp & rp) if is_anchor(g)),

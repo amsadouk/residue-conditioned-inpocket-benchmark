@@ -5,7 +5,7 @@ Every count below is recomputed from the files the figures read.
    attempted                     18 receptor pairs
    produced a final lead         17
    produced none                 1 (SRC_LCK)
-   rounds per campaign           ABL1_SRC 6, AKT1_AKT2 3, BRAF_V600E 8, BRAF_V600E_alt 8, CA2_CA1 8, CDK6_CDK2 8, CTSK_CTSS 5, EGFR_T790M 8, JAK2_JAK1 8, KRAS_G12C 8, MAPK14_MAPK1 2, MCL1_BCL2 8, MMP13_MMP1 5, PARP1_PARP2 8, PIK3CA_PIK3CD 8, PTGS2_PTGS1 8, ROCK1_ROCK2 3
+   rounds per campaign           ABL1_SRC 6, AKT1_AKT2 3, BRAF_V600E 8, BRAF_V600E_alt 8, CA2_CA1 8, CDK6_CDK2 8, CTSK_CTSS 6, EGFR_T790M 8, JAK2_JAK1 8, KRAS_G12C 8, MAPK14_MAPK1 2, MCL1_BCL2 8, MMP13_MMP1 5, PARP1_PARP2 8, PIK3CA_PIK3CD 8, PTGS2_PTGS1 8, ROCK1_ROCK2 3
    USED BY: containment, trajectories, structure panel
 
 2  MARKETED DRUG SET
